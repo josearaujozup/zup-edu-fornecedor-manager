@@ -22,7 +22,7 @@ public class CadastrarNovoFornecedorController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> cadastrar(@RequestBody @Valid FornecedorRequest request, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity<Void> cadastrar(@RequestBody @Valid FornecedorDTO request, UriComponentsBuilder uriComponentsBuilder){
 
         Fornecedor novoFornecedor = request.paraFornecedor();
 

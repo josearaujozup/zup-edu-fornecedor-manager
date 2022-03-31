@@ -4,7 +4,7 @@ import br.com.zup.edu.fornecedormanager.model.Fornecedor;
 
 import javax.validation.constraints.NotBlank;
 
-public class FornecedorRequest {
+public class FornecedorDTO {
     @NotBlank
     private String nome;
 
@@ -14,13 +14,13 @@ public class FornecedorRequest {
     @NotBlank
     private String empresa;
 
-    public FornecedorRequest(String nome, String produto, String empresa) {
+    public FornecedorDTO(String nome, String produto, String empresa) {
         this.nome = nome;
         this.produto = produto;
         this.empresa = empresa;
     }
 
-    public FornecedorRequest() {
+    public FornecedorDTO() {
     }
 
     public Fornecedor paraFornecedor(){
