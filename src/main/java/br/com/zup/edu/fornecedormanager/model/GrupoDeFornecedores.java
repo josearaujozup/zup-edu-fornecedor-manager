@@ -3,6 +3,7 @@ package br.com.zup.edu.fornecedormanager.model;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 public class GrupoDeFornecedores {
@@ -14,7 +15,7 @@ public class GrupoDeFornecedores {
     private String produto;
 
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.REMOVE)
     private List<Fornecedor> fornecedores= new ArrayList<>();
 
     public GrupoDeFornecedores(String produto) {
@@ -27,4 +28,18 @@ public class GrupoDeFornecedores {
     @Deprecated
     public GrupoDeFornecedores() {
     }
+
+	public void adicionar(Fornecedor f) {
+		this.fornecedores.add(f);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
 }
