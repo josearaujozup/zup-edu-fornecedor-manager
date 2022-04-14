@@ -19,6 +19,9 @@ public class Fornecedor {
     private String empresa;
 
     public LocalDateTime criadoEm=LocalDateTime.now();
+    
+    @ManyToOne
+    private GrupoDeFornecedores grupo;
 
     public Fornecedor(String nome, String produto, String empresa) {
         this.nome = nome;

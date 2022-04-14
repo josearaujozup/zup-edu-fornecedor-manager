@@ -15,7 +15,10 @@ public class GrupoDeFornecedores {
     private String produto;
 
 
-    @OneToMany(cascade = CascadeType.REMOVE)
+    @OneToMany(
+    	      cascade=CascadeType.REMOVE, 
+    	      mappedBy="grupo"
+    	    )
     private List<Fornecedor> fornecedores= new ArrayList<>();
 
     public GrupoDeFornecedores(String produto) {
