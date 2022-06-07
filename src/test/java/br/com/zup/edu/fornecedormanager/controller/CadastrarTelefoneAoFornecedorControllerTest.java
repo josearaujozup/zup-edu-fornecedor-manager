@@ -35,7 +35,7 @@ class CadastrarTelefoneAoFornecedorControllerTest {
     private MockMvc mockMvc;
 
     @Autowired
-    ObjectMapper mapper;
+    private ObjectMapper mapper;
 
     @Autowired
     private FornecedorRepository fornecedorRepository;
